@@ -1,1 +1,147 @@
 "# this is my new file created in branch feature-login" 
+
+Pre-requisite:
+1.	Git installation
+2.	GitHub account should be created
+3.	Create a new repository in GitHub as name “auth-webapp”
+=============================================================
+C:\Users\DELL>cd C:\Users\DELL\Simpli-Learn                                 => Local Folder Repo
+C:\Users\DELL\Simpli-Learn>git clone https://github.com/susilparida01/auth-webapp.git
+Cloning into 'auth-webapp'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+C:\Users\DELL\Simpli-Learn>cd auth-webapp
+C:\Users\DELL\Simpli-Learn\auth-webapp>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        forgot-password.html
+        index.html
+        login.html
+        register.html
+        styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git add .
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git commit -m "new files are added"
+[main 4438ab3] new files are added
+ 5 files changed, 116 insertions(+)
+ create mode 100644 forgot-password.html
+ create mode 100644 index.html
+ create mode 100644 login.html
+ create mode 100644 register.html
+ create mode 100644 styles.css
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git log
+commit 4438ab3309bfbe2629da77ce46da205ab87bdd0f (HEAD -> main)
+Author: susilparida01 <susil.parida01@gmail.com>
+Date:   Sat Nov 15 23:01:07 2025 +0530
+
+    new files are added
+
+commit 9950e128317c8cce16823b408be637c928ed9a3f (origin/main, origin/HEAD)
+Author: Susil Parida <89906563+susilparida01@users.noreply.github.com>
+Date:   Sat Nov 15 20:53:10 2025 +0530
+
+    Initial commit
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git branch
+* main
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git puch -u origin main
+git: 'puch' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git push -u origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.47 KiB | 753.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/susilparida01/auth-webapp.git
+   9950e12..4438ab3  main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git branch feature-login
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git branch
+  feature-login
+* main
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git checkout feature-login
+Switched to branch 'feature-login'
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>echo "# this is my new file created in branch feature-login" > testone.txt
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git status
+On branch feature-login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        testone.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git add .
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git commit -m "new text file is added to feature-login"
+[feature-login 9c4e476] new text file is added to feature-login
+ 1 file changed, 1 insertion(+)
+ create mode 100644 testone.txt
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git status
+On branch feature-login
+nothing to commit, working tree clean
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git merge feature-login
+Updating 4438ab3..9c4e476
+Fast-forward
+ testone.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 testone.txt
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git branch
+  feature-login
+* main
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 345.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/susilparida01/auth-webapp.git
+   4438ab3..9c4e476  main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\DELL\Simpli-Learn\auth-webapp>
+
